@@ -5,7 +5,6 @@ import Navbar from './components/Navbar/Navbar';
 import HeroSlider from './components/HeroSlider/HeroSlider';
 import ProductsSection from './components/Sections/ProductsSection';
 import AboutUsSection from './components/Sections/AboutUsSection';
-import AboutSection from './components/Sections/AboutSection';
 import ContactSection from './components/Sections/ContactSection';
 import FeaturesSection from './components/Sections/FeaturesSection';
 import Hero from './components/Hero/Hero';
@@ -21,7 +20,6 @@ function HomePage() {
       <FeaturesSection />
       <AboutUsSection />
       <ProductsSection />
-      <AboutSection />
       <ContactSection />
     </>
   );

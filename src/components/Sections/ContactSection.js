@@ -1,29 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaPhone, FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import './ContactSection.css';
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('شكراً لتواصلك معنا! سنرد عليك قريباً.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
 
   return (
     <section id="contact" className="contact-section section">
@@ -77,64 +56,6 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
-
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">الاسم</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="أدخل اسمك"
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="email">البريد الإلكتروني</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="example@email.com"
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="phone">رقم الهاتف</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                placeholder="01X XXX XXXX"
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">الرسالة</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows="5"
-                placeholder="اكتب رسالتك هنا..."
-              ></textarea>
-            </div>
-
-            <button type="submit" className="btn btn-primary">
-              إرسال الرسالة
-            </button>
-          </form>
         </div>
       </div>
     </section>
