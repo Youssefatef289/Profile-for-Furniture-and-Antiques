@@ -12,7 +12,6 @@ import {
 
 const ProductsSection = () => {
   const tabs = [
-    { label: 'الكل' },
     { label: 'الأثاث المميز' },
     { label: 'التحف' },
     { label: 'غرف المعيشة' },
@@ -20,26 +19,24 @@ const ProductsSection = () => {
     { label: 'غرف النوم' },
   ];
 
-  // دمج جميع المنتجات
-  const allProducts = [
-    ...featuredFurniture,
-    ...antiquesCollection,
-    ...livingCollection.map((item, index) => ({
-      ...item,
-      name: item.name || `مجموعة غرفة المعيشة ${index + 1}`,
-      description: item.description || 'قطعة أنيقة لغرفة المعيشة',
-    })),
-    ...diningCollection.map((item, index) => ({
-      ...item,
-      name: item.name || `طاولة طعام ${index + 1}`,
-      description: item.description || 'طاولة طعام فاخرة',
-    })),
-    ...bedroomCollection.map((item, index) => ({
-      ...item,
-      name: item.name || `قطعة غرفة نوم ${index + 1}`,
-      description: item.description || 'قطعة أنيقة لغرفة النوم',
-    })),
-  ];
+  // تحضير البيانات مع إضافة الأسماء والأوصاف
+  const preparedLivingCollection = livingCollection.map((item, index) => ({
+    ...item,
+    name: item.name || `مجموعة غرفة المعيشة ${index + 1}`,
+    description: item.description || 'قطعة أنيقة لغرفة المعيشة',
+  }));
+
+  const preparedDiningCollection = diningCollection.map((item, index) => ({
+    ...item,
+    name: item.name || `طاولة طعام ${index + 1}`,
+    description: item.description || 'طاولة طعام فاخرة',
+  }));
+
+  const preparedBedroomCollection = bedroomCollection.map((item, index) => ({
+    ...item,
+    name: item.name || `قطعة غرفة نوم ${index + 1}`,
+    description: item.description || 'قطعة أنيقة لغرفة النوم',
+  }));
 
   return (
     <section id="products" className="products-section">
@@ -53,11 +50,6 @@ const ProductsSection = () => {
 
         <Tabs tabs={tabs}>
           <CardGrid
-            items={allProducts}
-            showDescription={true}
-            columns={4}
-          />
-          <CardGrid
             items={featuredFurniture}
             showDescription={true}
             columns={4}
@@ -68,29 +60,17 @@ const ProductsSection = () => {
             columns={4}
           />
           <CardGrid
-            items={livingCollection.map((item, index) => ({
-              ...item,
-              name: item.name || `مجموعة غرفة المعيشة ${index + 1}`,
-              description: item.description || 'قطعة أنيقة لغرفة المعيشة',
-            }))}
+            items={preparedLivingCollection}
             showDescription={true}
             columns={4}
           />
           <CardGrid
-            items={diningCollection.map((item, index) => ({
-              ...item,
-              name: item.name || `طاولة طعام ${index + 1}`,
-              description: item.description || 'طاولة طعام فاخرة',
-            }))}
+            items={preparedDiningCollection}
             showDescription={true}
             columns={4}
           />
           <CardGrid
-            items={bedroomCollection.map((item, index) => ({
-              ...item,
-              name: item.name || `قطعة غرفة نوم ${index + 1}`,
-              description: item.description || 'قطعة أنيقة لغرفة النوم',
-            }))}
+            items={preparedBedroomCollection}
             showDescription={true}
             columns={4}
           />

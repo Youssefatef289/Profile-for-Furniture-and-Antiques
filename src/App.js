@@ -7,7 +7,7 @@ import ProductsSection from './components/Sections/ProductsSection';
 import AboutUsSection from './components/Sections/AboutUsSection';
 import AboutSection from './components/Sections/AboutSection';
 import ContactSection from './components/Sections/ContactSection';
-import SectionsGrid from './components/SectionsGrid/SectionsGrid';
+import FeaturesSection from './components/Sections/FeaturesSection';
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 import ImageModal from './components/ImageModal/ImageModal';
@@ -18,15 +18,9 @@ function HomePage() {
   return (
     <>
       <HeroSlider />
+      <FeaturesSection />
       <AboutUsSection />
       <ProductsSection />
-      <Hero
-        id="sections"
-        title="مجموعاتنا المتنوعة"
-        subtitle="اكتشف مجموعتنا الكاملة"
-        description="استكشف مجموعتنا الشاملة من الأثاث والتحف الفاخرة، كل قطعة مصممة بعناية لتضفي لمسة من الأناقة على مساحتك"
-      />
-      <SectionsGrid />
       <AboutSection />
       <ContactSection />
     </>
