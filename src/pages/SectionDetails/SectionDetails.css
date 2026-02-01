@@ -1,0 +1,112 @@
+.section-details-page {
+  min-height: 100vh;
+  background-color: var(--color-beige);
+}
+
+.section-details-header {
+  background: linear-gradient(135deg, var(--color-brown) 0%, var(--color-brown-dark) 100%);
+  padding: var(--spacing-xl) 0;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-xl);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-bottom: 2rem;
+  font-family: var(--font-primary);
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-5px);
+}
+
+.back-button svg {
+  font-size: 1rem;
+}
+
+.section-details-info {
+  text-align: center;
+}
+
+.section-details-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.section-details-description {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-details-count {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.section-details-content {
+  padding: 0 0 var(--spacing-xl) 0;
+}
+
+.section-not-found {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-beige);
+  text-align: center;
+}
+
+.section-not-found h2 {
+  font-size: 2rem;
+  color: var(--color-brown);
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .section-details-title {
+    font-size: 2.5rem;
+  }
+
+  .section-details-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-details-title {
+    font-size: 2rem;
+  }
+
+  .section-details-description {
+    font-size: 1rem;
+  }
+
+  .back-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
