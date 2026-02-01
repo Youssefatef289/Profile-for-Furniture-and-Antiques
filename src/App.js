@@ -7,7 +7,6 @@ import ProductsSection from './components/Sections/ProductsSection';
 import AboutUsSection from './components/Sections/AboutUsSection';
 import ContactSection from './components/Sections/ContactSection';
 import FeaturesSection from './components/Sections/FeaturesSection';
-import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 import ImageModal from './components/ImageModal/ImageModal';
 import SectionDetails from './pages/SectionDetails/SectionDetails';
