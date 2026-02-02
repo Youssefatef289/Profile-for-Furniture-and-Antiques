@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPhone, FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhone, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaFacebook } from 'react-icons/fa';
 import './ContactSection.css';
 
 const ContactSection = () => {
@@ -20,7 +20,7 @@ const ContactSection = () => {
               </div>
               <div className="info-content">
                 <h3>الهاتف</h3>
-                <a href="tel:+201055862183">+20 10 55862183</a>
+                <a href="tel:+201050894112">+20 10 50894112</a>
               </div>
             </div>
 
@@ -30,7 +30,7 @@ const ContactSection = () => {
               </div>
               <div className="info-content">
                 <h3>واتساب</h3>
-                <a href="http://wa.me/201055862183" target="_blank" rel="noopener noreferrer">
+                <a href="http://wa.me/201050894112" target="_blank" rel="noopener noreferrer">
                   تواصل معنا عبر واتساب
                 </a>
               </div>
@@ -52,10 +52,45 @@ const ContactSection = () => {
               </div>
               <div className="info-content">
                 <h3>الموقع</h3>
-                <p>القاهرة، مصر</p>
+                <p>بني سويف - اخر شارع حاتم رشدي من الروضه (الشارع الجديد) أمام صيدليه اريج جمال, Beni Suef, Egypt, 62511</p>
+              </div>
               </div>
             </div>
           </div>
+
+        {/* Floating Contact Buttons */}
+        <div className="floating-contact-buttons">
+          <a
+            href="tel:+201050894112"
+            className="floating-btn floating-btn-phone"
+            aria-label="اتصل بنا"
+            title="اتصل بنا"
+          >
+            <FaPhone />
+            <span className="floating-btn-text">اتصل بنا</span>
+          </a>
+          <a
+            href="http://wa.me/201050894112"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="floating-btn floating-btn-whatsapp"
+            aria-label="واتساب"
+            title="واتساب"
+          >
+            <FaWhatsapp />
+            <span className="floating-btn-text">واتساب</span>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61553085327842"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="floating-btn floating-btn-facebook"
+            aria-label="فيسبوك"
+            title="فيسبوك"
+          >
+            <FaFacebook />
+            <span className="floating-btn-text">فيسبوك</span>
+          </a>
         </div>
       </div>
     </section>

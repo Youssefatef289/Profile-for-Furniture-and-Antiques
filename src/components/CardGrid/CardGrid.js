@@ -1,6 +1,7 @@
 import React from 'react';
-import { FaEye } from 'react-icons/fa';
+import { FaEye, FaShoppingCart } from 'react-icons/fa';
 import { useModal } from '../../context/ModalContext';
+import { useCart } from '../../context/CartContext';
 import './CardGrid.css';
 
 const CardGrid = ({ 
@@ -12,6 +13,7 @@ const CardGrid = ({
   onImageClick
 }) => {
   const { openModal } = useModal();
+  const { addToCart } = useCart();
 
   const handleImageClick = (item) => {
     if (onImageClick) {
@@ -61,6 +63,23 @@ const CardGrid = ({
                     {item.description && (
                       <p className="card-description">{item.description}</p>
                     )}
+                    <button
+                      className="card-add-to-cart-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        addToCart({
+                          id: item.id || index,
+                          name: item.name || item.title || `منتج ${index + 1}`,
+                          description: item.description,
+                          image: item.image,
+                          price: item.price || 0,
+                        });
+                      }}
+                      aria-label="أضف إلى السلة"
+                    >
+                      <FaShoppingCart />
+                      <span>أضف إلى السلة</span>
+                    </button>
                   </div>
                 )}
               </div>

@@ -22,7 +22,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all var(--transition-normal);
-  font-family: var(--font-primary);
+  font-family: 'Cairo', sans-serif;
   position: relative;
   white-space: nowrap;
 }

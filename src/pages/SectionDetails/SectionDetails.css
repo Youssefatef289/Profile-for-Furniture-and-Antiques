@@ -24,7 +24,7 @@
   cursor: pointer;
   transition: all var(--transition-normal);
   margin-bottom: 2rem;
-  font-family: var(--font-primary);
+  font-family: 'Cairo', sans-serif;
 }
 
 .back-button:hover {

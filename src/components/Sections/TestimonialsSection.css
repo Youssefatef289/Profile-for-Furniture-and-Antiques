@@ -1,0 +1,109 @@
+.testimonials-section {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(135deg, #F5F1EB 0%, #FFFFFF 100%);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: var(--spacing-lg);
+}
+
+.testimonial-card {
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-normal);
+  position: relative;
+  border: 1px solid rgba(139, 115, 85, 0.1);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.testimonial-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 3px solid var(--color-accent);
+}
+
+.testimonial-info {
+  flex: 1;
+}
+
+.testimonial-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-brown);
+  margin: 0 0 0.25rem 0;
+}
+
+.testimonial-role {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin: 0;
+}
+
+.testimonial-quote-icon {
+  color: var(--color-primary);
+  font-size: 2rem;
+  opacity: 0.2;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.star-icon {
+  color: var(--color-accent);
+  font-size: 1rem;
+}
+
+.testimonial-text {
+  color: var(--color-gray);
+  line-height: 1.8;
+  font-size: 1rem;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 968px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+

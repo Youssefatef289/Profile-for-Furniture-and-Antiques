@@ -133,9 +133,9 @@ export const sections = [
   },
   {
     id: 'leprosy',
-    name: 'برص',
+    name: 'الجذم',
     nameEn: 'leprosy',
-    description: 'مجموعة متنوعة من البرص',
+    description: 'مجموعة متنوعة من الجذم',
     image: '/img/leprosy/leprosy (1).jpg',
     folder: 'leprosy',
     products: [

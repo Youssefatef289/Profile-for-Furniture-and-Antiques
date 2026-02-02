@@ -87,7 +87,7 @@
   font-size: 1rem;
   font-weight: 600;
   transition: all var(--transition-normal);
-  font-family: var(--font-primary);
+  font-family: 'Cairo', sans-serif;
   white-space: nowrap;
 }
 
