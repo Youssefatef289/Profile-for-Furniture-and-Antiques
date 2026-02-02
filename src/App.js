@@ -6,6 +6,7 @@ import HeroSlider from './components/HeroSlider/HeroSlider';
 import ProductsSection from './components/Sections/ProductsSection';
 import AboutUsSection from './components/Sections/AboutUsSection';
 import FeaturesSection from './components/Sections/FeaturesSection';
+import ManufacturingSection from './components/Sections/ManufacturingSection';
 import TestimonialsSection from './components/Sections/TestimonialsSection';
 import StatsSection from './components/Sections/StatsSection';
 import FAQSection from './components/Sections/FAQSection';
@@ -24,6 +25,7 @@ function HomePage() {
       <FeaturesSection />
       <StatsSection />
       <AboutUsSection />
+      <ManufacturingSection />
       <ProductsSection />
       <TestimonialsSection />
       <FAQSection />

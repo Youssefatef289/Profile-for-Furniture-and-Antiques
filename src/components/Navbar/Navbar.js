@@ -97,6 +97,7 @@ const Navbar = () => {
     { label: 'المميزات', href: '#features' },
     { label: 'الإحصائيات', href: '#stats' },
     { label: 'من نحن', href: '#about-us' },
+    { label: 'التصنيع بالعمولة', href: '#manufacturing' },
     { label: 'منتجاتنا', href: '#products' },
     { label: 'آراء العملاء', href: '#testimonials' },
     { label: 'الأسئلة الشائعة', href: '#faq' },
